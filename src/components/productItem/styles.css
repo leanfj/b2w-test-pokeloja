@@ -1,0 +1,23 @@
+.item-container {
+  border: 3px solid #d5d6d7;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+  box-shadow: 3px 3px 5px 0px #00000038;
+  margin: 10px auto;
+  width: 220px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*.item-container button {*/
+/*width: 100%;*/
+/*padding: 10px;*/
+/*border: none;*/
+/*background-color: transparent;*/
+/*border-top: 1px solid #000000;*/
+/*cursor: pointer;*/
+/*margin-top: auto;*/
+/*}*/

@@ -1,0 +1,13 @@
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 3px solid #d5d6d7;
+  margin: 0 5px;
+}
+
+.cart-item p {
+  border: none;
+  text-align: left;
+  flex-grow: 1;
+}

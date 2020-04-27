@@ -1,0 +1,18 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.product-list {
+  flex: 1;
+}
+
+.product-list ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 300px);
+  width: 100%;
+  list-style: none;
+  justify-content: center;
+}
+

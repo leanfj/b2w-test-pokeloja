@@ -1,0 +1,28 @@
+.search-bar {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-bar input {
+  width: 100%;
+  padding: 10px 60px;
+  height: 60px;
+  font-size: 1.6rem;
+  font-family: "Bangers", cursive;
+  color: #ffffff;
+  background-color: #ff0000;
+}
+.search-bar input::placeholder {
+  color: #ffffff;
+  opacity: 1;
+}
+.search-bar button {
+  position: absolute;
+  left: 10px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  color: #ffffff;
+}

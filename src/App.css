@@ -1,38 +1,27 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.poke-button {
+  background-color: #cc0000;
+  color: #ffffff;
+  width: 100%;
+  height: 50px;
+  padding: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-family: "Bangers", cursive;
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  transition: all 0.3s;
+}
+.poke-button svg {
+  margin-left: 10px;
+  transition: all 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.poke-button:hover {
+  background-color: #f40808;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.poke-button:hover svg {
+  transform: rotate(360deg);
 }

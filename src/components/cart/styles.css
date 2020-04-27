@@ -1,0 +1,29 @@
+.cart-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  border-left: 3px solid #d5d6d7;
+  justify-content: flex-start;
+}
+.cart-container .cart-header {
+  text-align: center;
+  padding: 15px;
+  border-bottom: 3px solid #d5d6d7;
+  font-size: 1.8rem;
+  font-family: "Bangers", cursive;
+  color: #ffffff;
+  background-color: #3b4cca;
+}
+
+@media (max-width: 600px) {
+  .cart-container {
+    width: 100%;
+    border: none;
+  }
+}
+.cart-items {
+  padding: 10px;
+}
+.cart-total {
+  padding: 10px;
+}
