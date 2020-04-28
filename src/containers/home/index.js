@@ -9,6 +9,7 @@ import pokebola from "../../pokebola.png";
 
 const Home = () => {
   const [pokeData, setPokeData] = useState([]);
+  const [cartData, setCartData] = useState([]);
 
   useEffect(() => {
     const getData = async () => {
