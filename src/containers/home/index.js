@@ -5,7 +5,7 @@ import ProductItem from "../../components/productItem";
 import Cart from "../../components/cart";
 import instance from "../../services/pokeAPI";
 
-import pokebola from  "../../pokebola.png"
+import pokebola from "../../pokebola.png";
 
 const Home = () => {
   const [pokeData, setPokeData] = useState([]);
@@ -15,10 +15,9 @@ const Home = () => {
       const response = await instance.get("/type/ice");
 
       response.data.pokemon.map(async (item) => {
-        const response = await instance.get(item.pokemon.url)
-        setPokeData((data) => [...data, response.data])
-      })
-      
+        const response = await instance.get(item.pokemon.url);
+        setPokeData((data) => [...data, response.data]);
+      });
     };
 
     getData();
@@ -26,20 +25,21 @@ const Home = () => {
 
   return (
     <div className="Home">
-    
+      <SearchBar />
       <div className="content">
-        <div className="product-list" >
-            <ul>
-              {
-                pokeData.map((pokemon) => {
-                  return (
-                    <li>
-                      <ProductItem name={pokemon.name} sprite={pokemon.sprites.front_default || pokebola} />
-                    </li>
-                  )
-                })
-              }
-            </ul>        
+        <div className="product-list">
+          <ul>
+            {pokeData.map((pokemon) => {
+              return (
+                <li>
+                  <ProductItem
+                    name={pokemon.name}
+                    sprite={pokemon.sprites.front_default || pokebola}
+                  />
+                </li>
+              );
+            })}
+          </ul>
         </div>
         <Cart />
       </div>
