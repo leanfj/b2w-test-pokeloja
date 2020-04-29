@@ -10,39 +10,51 @@ import pokebola from "../../pokebola.png";
 const Home = () => {
   const [pokeData, setPokeData] = useState([]);
   const [cartData, setCartData] = useState([]);
+  const [pokeType, setPokeType] = useState("");
 
   useEffect(() => {
     const getData = async () => {
       const response = await instance.get("/type/ice");
-
+      setPokeType(response.data.name);
       response.data.pokemon.map(async (item) => {
         const response = await instance.get(item.pokemon.url);
         setPokeData((data) => [...data, response.data]);
       });
     };
-
     getData();
   }, []);
 
+  const addToCart = (e, pokemon) => {
+    e.preventDefault();
+    setCartData((data) => [...data, pokemon]);
+  };
+
+  const removeFromCart = (e, itemKey) => {
+    e.preventDefault();
+    setCartData(cartData.filter((item, index) => index !== itemKey));
+  };
+
   return (
-    <div className="Home">
+    <div className={`Home ${pokeType}`}>
       <SearchBar />
       <div className="content">
         <div className="product-list">
           <ul>
-            {pokeData.map((pokemon) => {
+            {pokeData.map((pokemon, index) => {
               return (
-                <li>
+                <li key={index}>
                   <ProductItem
                     name={pokemon.name}
                     sprite={pokemon.sprites.front_default || pokebola}
+                    price={pokemon.base_experience}
+                    handleCart={addToCart}
                   />
                 </li>
               );
             })}
           </ul>
         </div>
-        <Cart />
+        <Cart data={cartData} handleRemove={removeFromCart} />
       </div>
     </div>
   );

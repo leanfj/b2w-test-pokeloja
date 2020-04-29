@@ -21,6 +21,10 @@
     border: none;
   }
 }
+.cart-container h3 {
+  text-align: center;
+  margin: 10px 0;
+}
 .cart-items {
   padding: 10px;
 }

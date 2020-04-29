@@ -1,14 +1,13 @@
 import React from "react";
-import pokemon from "../../pokemon.png";
 import "./styles.css";
 import { FiTrash } from "react-icons/fi";
-const CartItem = () => {
+const CartItem = ({ idx, data, deletItem }) => {
   return (
     <div className="cart-item">
-      <img src={pokemon} alt="Pokemon" />
-      <p>Nome</p>
-      <span>Preço</span>
-      <button>
+      <img src={data.sprite} alt="Pokemon" />
+      <p>{data.name}</p>
+      <span>R$ {data.price}</span>
+      <button onClick={(e) => deletItem(e, idx)}>
         <FiTrash />
       </button>
     </div>

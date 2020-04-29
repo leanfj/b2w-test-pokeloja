@@ -13,6 +13,13 @@
   justify-content: center;
   transition: all 0.3s;
 }
+.ice .poke-button {
+  background-color: #6aacf6;
+}
+.fire .poke-button {
+  background-color: #ee8329;
+}
+
 .poke-button svg {
   margin-left: 10px;
   transition: all 0.3s;
@@ -20,6 +27,12 @@
 
 .poke-button:hover {
   background-color: #f40808;
+}
+.ice .poke-button:hover {
+  background-color: #6aacf6;
+}
+.fire .poke-button:hover {
+  background-color: #ee8329;
 }
 
 .poke-button:hover svg {

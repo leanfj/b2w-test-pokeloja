@@ -15,6 +15,12 @@
   color: #ffffff;
   background-color: #ff0000;
 }
+.ice .search-bar input {
+  background-color: #6aacf6;
+}
+.fire .search-bar input {
+  background-color: #ee8329;
+}
 .search-bar input::placeholder {
   color: #ffffff;
   opacity: 1;
