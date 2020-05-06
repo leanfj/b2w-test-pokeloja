@@ -1,7 +1,17 @@
 import React from "react";
-
-const CheckoutModal = () => {
-  return <div>Modal</div>;
+import "./styles.css";
+import { FiX } from "react-icons/fi";
+const CheckoutModal = ({ showModal, closeCheckout }) => {
+  return (
+    <div className={`modal ${showModal ? "show" : "hide"}`}>
+      <div className="modal-content">
+        modal{" "}
+        <span onClick={() => closeCheckout()}>
+          <FiX />
+        </span>
+      </div>
+    </div>
+  );
 };
 
 export default CheckoutModal;

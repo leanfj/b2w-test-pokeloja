@@ -2,7 +2,7 @@ import React from "react";
 import CartItem from "../cartItem";
 import { FiCheck } from "react-icons/fi";
 import "./styles.css";
-const Cart = ({ data, handleRemove }) => {
+const Cart = ({ data, totalPrice, handleRemove, handleChekout }) => {
   return (
     <div className="cart-container">
       <p className="cart-header">Carrinho</p>
@@ -17,8 +17,8 @@ const Cart = ({ data, handleRemove }) => {
           );
         })
       )}
-      <div className="cart-total">Total</div>
-      <button className="poke-button">
+      <div className="cart-total"> {totalPrice}</div>
+      <button className="poke-button" onClick={handleChekout}>
         Finalizar <FiCheck />
       </button>
     </div>

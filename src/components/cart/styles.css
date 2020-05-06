@@ -30,4 +30,7 @@
 }
 .cart-total {
   padding: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  border-top: 3px solid #d5d6d7;
 }

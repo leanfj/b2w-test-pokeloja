@@ -13,13 +13,18 @@
   font-size: 1.6rem;
   font-family: "Bangers", cursive;
   color: #ffffff;
-  background-color: #ff0000;
+  background-color: #d5d5d5;
+  outline: none;
+  border: none;
 }
 .ice .search-bar input {
   background-color: #6aacf6;
 }
 .fire .search-bar input {
   background-color: #ee8329;
+}
+.electric .search-bar input {
+  background-color: #f6e652;
 }
 .search-bar input::placeholder {
   color: #ffffff;
